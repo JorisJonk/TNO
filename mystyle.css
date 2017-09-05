@@ -42,6 +42,7 @@
     word-break: normal;
     border-width: thin;
     box-shadow: 10px 10px 5px #888888;
+
 }
 
 .box3 {
@@ -51,7 +52,7 @@
     border-style: hidden;
     border-color: green;
     border-radius: 40px;
-    margin-left: 10%;
+    
 }
 
 .box4 {
@@ -356,6 +357,7 @@
     right: 0px;
 }
 
-.dropdown{
-  
+.btn btn-default dropdown-toggle{
+  background-color: green;
+
 }
