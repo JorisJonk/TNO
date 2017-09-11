@@ -336,6 +336,11 @@
     float: left;
 }
 
+.regionaam {
+  background-color: green;
+}
+
+
 #content {
     position: relative;
 }
@@ -368,7 +373,4 @@
 .btn btn-default dropdown-toggle{
   background-color: green;
 
-}
-.ajaxfield{
-  
 }
