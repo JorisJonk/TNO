@@ -6,95 +6,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="mystyle.css">
     <link rel="stylesheet" type="text/css" href="non-responsive.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <SCRIPT LANGUAGE="JavaScript">
-        var NOBrabant = new Array("Noord-oost Brabant", "82%", "20%", 1, 1, 2, 2, "20%", "21%", "22%", "40%", "50%", "12%", "70%", "20%", "21%", "22%", "40%", "50%", "12%", "70%", "22%", "40%", "50%", "12%", "70%", "20%", "21%");
-        var Zuidholland = new Array("Zuidholland", "50%", "40%", 2, 2, 1, 1, "30%", "40%", "22%", "21%", "82%", "20%", "22%", "40%", "50%", "12%", "30%", "40%", "22%", "21%", "82%", "20%", "22%", "21%", "82%", "20%", "22%", "40%", "50%", "12%");
-        var Westbrabant = new Array("")
-        var options = new Array(NOBrabant, Zuidholland, Westbrabant);
+    <script type="text/javascript" src="node_modules/jquery-circles-progressbar/dist/jquery.circles-progressbar.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/kimmobrunfeldt/progressbar.js/1.0.0/dist/progressbar.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
 
 
 
-        console.log("array created");
-        /*  function fillarray(excelfile.txt){
-          //readmethode en stop de regio's in een multidimensonale array (40*5)
-        }
-      */
-
-        function changeview1(number) {
-            console.log("changedview");
-            var nr = number - 1;
-            document.getElementById("regionaam").innerHTML = options[nr][0];
-            document.getElementById("arbeidspart55").innerHTML = options[nr][1];
-            document.getElementById("werkloos").innerHTML = options[nr][2];
-            // thumbs  document.getElementById("werkloos").innerHTML = options[nr][2];
-            // document.getElementById("werkloos").innerHTML = options[nr][2];
-            // document.getElementById("werkloos").innerHTML = options[nr][2];
-            // document.getElementById("werkloos").innerHTML = options[nr][2];
-            // document.getElementById("werkloos").innerHTML = options[nr][2];
-            document.getElementById("doorwerpen").innerHTML = options[nr][8];
-            document.getElementById("kwetsgroep").innerHTML = options[nr][9];
-            document.getElementById("maatregge").innerHTML = options[nr][10];
-            // thumb document.getElementById("").innerHTML = options[nr][9];
-            document.getElementById("goedgez").innerHTML = options[nr][12];
-            //cardio width: % document.getElementById("kwetsgroep").innerHTML = options[nr][9];
-            document.getElementById("werkprive").innerHTML = options[nr][14];
-            //jingjang width: % document.getElementById("kwetsgroep").innerHTML = options[nr][9];
-            document.getElementById("voltoeg").innerHTML = options[nr][16];
-            document.getElementById("taakeisen").innerHTML = options[nr][17];
-            document.getElementById("maknieuw").innerHTML = options[nr][18];
-            // weegschaal 1
-            // weegschaal 2
-            // thumbs
-            document.getElementById("cursop").innerHTML = options[nr][22];
-            //document.getElementById("maknieuw").innerHTML = options[nr][20];
-            //document.getElementById("taakeisen").innerHTML = options[nr][21];
-            //document.getElementById("maknieuw").innerHTML = options[nr][22];
-            // thumbsdocument.getElementById("taakeisen").innerHTML = options[nr][19];
-            document.getElementById("innov").innerHTML = options[nr][27];
-
-        }
-
-        function move() {
-            var elem = document.getElementById("bar1");
-            var width = 1;
-            var id = setInterval(frame, 10);
-            var max = 81;
-
-            function frame() {
-                if (width >= max) {
-                    clearInterval(id);
-                } else {
-                    width++;
-                    document.getElementById("goedgez").innerHTML = width + "%";
-                    elem.style.width = width + '%';
 
 
-                }
-            }
-        }
-
-        function move2() {
-            var elem = document.getElementById("bar2");
-            var width = 1;
-            var id = setInterval(frame, 10);
-            var max = 85;
-
-            function frame() {
-                if (width >= max) {
-                    clearInterval(id);
-                } else {
-                    width++;
-                    document.getElementById("werkprive").innerHTML = width + "%";
-                    elem.style.width = width + '%';
-
-
-                }
-            }
-        }
-    </script>
 
 </head>
 
@@ -116,12 +38,12 @@
     <span class="caret"></span>
   </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                    <li><a onclick="changeview1(1); move(); move2()">Brabant</a></li>
+                                    <li><a onclick="fire(0)">Brabant</a></li>
                                     <li class="dropdown-header">Dropdown header</li>
-                                    <li><a onclick="changeview1(2)">Zuid-Holland</a></li>
+                                    <li><a onclick="">Zuid-Holland</a></li>
                                     <li><a href="#">Utrecht</a></li>
                                     <li role="separator" class="divider"></li>
-                                    <li><a href="#">CONOR-regio's</a></li>
+                                    <li><a href="#">Corop-regio's</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -131,7 +53,7 @@
                 <div class="col-xs-5">
 
                     <div id="regionaam" style="font-size: 30px; color: green; font-weight: bold;">
-                        Noord-oost Brabant
+                        Nationaal gemiddelde
                     </div>
                 </div>
             </div>
@@ -143,7 +65,7 @@
                     <p> beterdangemiddeld </p> -->
                 </div>
                 <div class="col-xs-3">
-                  <!--  <img class="floatleft" src="image/thumbsdown.png">
+                    <!--  <img class="floatleft" src="image/thumbsdown.png">
                     <p> slechterdangemiddeld </p> -->
                 </div>
                 <div class="col-xs-3">
@@ -165,48 +87,56 @@
                         </div>
                         <div class="fctextbox">
                             <p class="greenheader"> Beroepsbevolking in de regio </p>
-                            <p><span id="arbeidspart55" style="font-weight: bold;"> -62% </span> &nbsp; arbeidsparticipatie 55-plussers </p>
-                            <p> <span id="werkloos" style="font-weight: bold;"> 6,2% </span> &nbsp;is werkloos </p>
+                            <p style="font-size: 9px;"><span id="arbeidspart55" style="font-weight: bold; font-size:12px;">62% </span> &nbsp; arbeidsparticipatie 55-plussers </p>
+                            <p style="font-size: 9px;"> <span id="werkloos" style="font-weight: bold; font-size: 12px;"> 6.2% </span> &nbsp;is werkloos </p>
                         </div>
-                        <div id="contentc">
-                          <!--  <img src="image/thumbsnormal.png" class="thumbsnormal" /> -->
-                        </div>
-
-                        <div class="fctextbox">
-                            <p class="greenheader"> Trends in de regio 2010-2014 </p>
-                            <p class="arrowup"> meer interne baanmogelijkheid </p>
-                            <p class="arrowup"> langer door willen werken </p>
-                            <p class="arrowdown"> minder vertrouwen een nieuwe baan kunnen vinden</p>
-                            <p class="arrowdown"> minder regelmogelijkheden </p>
+                          <div id="trendbox1" class="fctextbox">
+                            <div class="greenheader"> Trends in de regio 2010-2016 </div>
+                            <div id="trend1">  </div>
+                            <div id="trend2"> </div>
+                            <div id="trend3"> </div>
+                            <div id="trend4">  </div>
+                            <div id="trend5">  </div>
+                            <div id="trend6"> </div>
+                            <div id="trend7"> </div>
+                            <div id="trend8">  </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-2">
+                <div class="col-xs-2 backgroundarrow3">
                     <div class="box2a">
                         <div class="box2">
                             <p class="greenheader"> &nbsp; &nbsp; DI beleid </p>
 
-                            <div class="ditextbox">
-                                <p> <span id="doorwerpen" style="font-weight: bold;"> 19% </span> van de werkgevers vindt doorwerken tot pensioen belangrijk </p>
+                            <div id="container4" class="container4">
+
                             </div>
                             <div class="ditextbox">
-                                <p> <span id="kwetsgroep" style="font-weight: bold;"> 23% </span> van het personeel is afkomstig van kwetsbare groepen </p>
+                                <p> <span id="doorwerpen" style="font-weight: bold;"> </span> doorwerken tot pensioen</p>
+                            </div>
+                            <div id="container5" class="container5">
                             </div>
                             <div class="ditextbox">
-                                <p> <span id="maatregge" style="font-weight: bold;"> 37% </span> van de werkgevers heeft maatregelen getroffen om langer doorwerken mogelijk te maken </p>
+                                <p> <span id="kwetsgroep" style="font-weight: bold;"> </span> kwetsbare groepen </p>
+                            </div>
+                            <div id="container6" class="container6">
+
+                            </div>
+                            <div class="ditextbox">
+                                <p> <span id="maatregge" style="font-weight: bold;"> </span> maatregelen langer doorwerken</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-xs-4 backgroundarrow2" ;>
                     <div class="box3">
 
 
                         <div class="row">
                             <div class="textbox3">
-                              <div id="titel1">
-                                <p class="greenheader"> Belastbaarheid </p>
-                              </div>
+                                <div id="titel1">
+                                    <p class="greenheader"> Belastbaarheid </p>
+                                </div>
 
                                 <div id="cardio">
                                     <img src="image/cardio.png" alt="heartbeat">
@@ -215,7 +145,7 @@
                                     <p><span id="goedgez" style="font-weight: bold;"> 77% </span>goede gezondheid </p>
                                 </div>
 
-                                <div class="healthbar" style="position: absolute; width: 70%; right: 15px; top: 56px; ">
+                                <div class="healthbar" style="position: absolute; width: 70%; right: 30px; top: 56px; ">
                                     <div class="progress">
                                         <div id="bar1" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:77%">
 
@@ -230,9 +160,9 @@
                                 <div id="floattext2">
                                     <p> <span id="werkprive" style="font-weight: bold;"> 85% </span> geen werk-prive conflict </p>
                                 </div>
-                                <div class="healthbar" style="position: absolute; width: 70%; top: 98px; left: 83px;">
+                                <div class="healthbar" style="position: absolute; width: 70%; top: 98px; left: 60px;">
                                     <div class="progress">
-                                        <div id="bar2" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+                                        <div id="bar2" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:85%">
 
                                         </div>
                                     </div>
@@ -250,74 +180,74 @@
                                     </div>
                                     <div class="healthbar" style="position: absolute; width: 70%; right: 40px; top: 12px; ">
                                         <div class="progress">
-                                            <div id="bar1" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:77%">
+                                            <div id="bar3" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:77%">
                                             </div>
                                         </div>
                                     </div>
 
-                                        <div id="eisen">
-                                            <img src="image/checklist.png" />
-                                        </div>
-                                        <div class="healthbar" style="position: absolute; width: 70%; right: 40px; top: 55px; ">
-                                            <div class="progress">
-                                                <div id="bar1" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:77%">
-                                                </div>
+                                    <div id="eisen">
+                                        <img src="image/checklist.png" />
+                                    </div>
+                                    <div class="healthbar" style="position: absolute; width: 70%; right: 40px; top: 55px; ">
+                                        <div class="progress">
+                                            <div id="bar4" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:77%">
                                             </div>
                                         </div>
+                                    </div>
 
-                                        <div id="nieuwbaan">
-                                            <img src="image/handshake.png" />
-                                        </div>
-                                        <div class="healthbar" style="position: absolute; width: 70%; right: 40px; top: 95px; ">
-                                            <div class="progress">
-                                                <div id="bar1" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:77%">
-                                                </div>
+                                    <div id="nieuwbaan">
+                                        <img src="image/handshake.png" />
+                                    </div>
+                                    <div class="healthbar" style="position: absolute; width: 70%; right: 40px; top: 95px; ">
+                                        <div class="progress">
+                                            <div id="bar5" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:77%">
                                             </div>
                                         </div>
+                                    </div>
 
-                                        <div id="textbox1">
-                                            <p> <span id="voltoeg" style="font-weight: bold;"> 88% </span> voldoende toegerust </p>
-                                        </div>
-                                        <div id="textbox2">
-                                            <p> <span id="taakeisen" style="font-weight: bold;"> 86% </span> phychische en fysieke taakeisen </p>
-                                        </div>
-                                        <div id="textbox3">
-                                            <p> <span id="maknieuw" style="font-weight: bold;"> 55% </span> gemakkelijk andere baan </p>
-                                        </div>
+                                    <div id="textbox1">
+                                        <p> <span id="element3" style="font-weight: bold;"> 88% </span> voldoende toegerust </p>
+                                    </div>
+                                    <div id="textbox2">
+                                        <p> <span id="element4" style="font-weight: bold;"> 86% </span> phychische en fysieke taakeisen </p>
+                                    </div>
+                                    <div id="textbox3">
+                                        <p> <span id="element5" style="font-weight: bold;"> 55% </span> gemakkelijk andere baan </p>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
                         <div class="row">
                             <div class="textbox3b">
                                 <p class="greenheader"> Belasting </p>
                                 <div id="content">
-                                  <div id="werkbelasting">
-                                      <img src="image/load.png" />
-                                  </div>
-                                  <div class="healthbar" style="position: absolute; width: 70%; right: 40px; top: 15px; ">
-                                      <div class="progress">
-                                          <div id="bar1" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:77%">
-                                          </div>
-                                      </div>
-                                  </div>
+                                    <div id="werkbelasting">
+                                        <img src="image/load.png" />
+                                    </div>
+                                    <div class="healthbar" style="position: absolute; width: 70%; right: 40px; top: 25px; ">
+                                        <div class="progress">
+                                            <div id="bar6" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:77%">
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                  <div id="regelmogelijkheden">
-                                      <img src="image/regelen.png" />
-                                  </div>
-                                  <div class="healthbar" style="position: absolute; width: 70%; right: 40px; top: 65px; ">
-                                      <div class="progress">
-                                          <div id="bar1" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:77%">
-                                          </div>
-                                      </div>
-                                  </div>
+                                    <div id="regelmogelijkheden">
+                                        <img src="image/regelen.png" />
+                                    </div>
+                                    <div class="healthbar" style="position: absolute; width: 70%; right: 40px; top: 65px; ">
+                                        <div class="progress">
+                                            <div id="bar7" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:77%">
+                                            </div>
+                                        </div>
+                                    </div>
 
                                 </div>
                                 <div id="textbox4">
-                                    <p> 88% werkbelasting </p>
+                                    <p> <span id="element6" style="font-weight: bold;"> 86% </span> werkbelasting </p>
                                 </div>
                                 <div id="textbox5">
-                                    <p> 86% regelmogelijkheden </p>
+                                    <p> <span id="element7" style="font-weight: bold;"> 85% </span> regelmogelijkheden </p>
                                 </div>
                             </div>
                         </div>
@@ -327,22 +257,41 @@
 
 
 
-                <div class="col-xs-4">
+                <div class="col-xs-4 backgroundarrow">
                     <div class="box4">
                         <div class="textbox4imga">
                             <p class="greenheader"> Omgaan met verandering </p>
                             <div id="contentb">
                                 <!--<img src="image/thumbsdown.png" class="thumbsnormal" /> -->
                             </div>
-                            <div id="textbox1b">
-                                <p> <span id="cursop" style="font-weight: bold;"> 51% </span> van de werknemers heeft in de afgelopen 2 jaar een opleiding of cursus gevolgd </p>
+                            <div id="textbox1f">
+                                <p> <span id="element8" style="font-weight: bold;"> 51% </span> opleiding of cursus gevolgd </p>
                             </div>
+                            <div id="education">
+                                <img src="image/education.png" />
+                            </div>
+                            <div class="healthbar" style="position: absolute; width: 70%; right: 30px; top: 58px; ">
+                                <div class="progress">
+                                    <div id="bar8" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:77%">
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
+
+
                         <div class="textbox4imgb">
                             <p class="greenheader"> Duurzame inzetbaarheid </p>
                             <div id="content">
-                              <!--  <img src="image/thumbsnormal.png" class="thumbsnormal" /> -->
+                                <!--  <img src="image/thumbsnormal.png" class="thumbsnormal" /> -->
                             </div>
+                            <div id="container7" class="container7">
+                            </div>
+                            <div id="container8" class="container8">
+                            </div>
+                        </div>
+
+                        <!--
                             <div class="tekstbox41">
                                 <p> Wil </p>
                             </div>
@@ -355,23 +304,578 @@
                             <div class="tekstbox44">
                                 <p> werken tot </p>
                             </div>
+                          -->
+                    </div>
+                    <div class="textbox4imgc">
+                        <p class="greenheader"> Verandering in werk </p>
+                        <div id="content">
+                            <!--  <img src="image/thumbsnormal.png" class="thumbsnormal" /> -->
                         </div>
-                        <div class="textbox4imgc">
-                            <p class="greenheader"> Verandering in werk </p>
-                            <div id="content">
-                              <!--  <img src="image/thumbsnormal.png" class="thumbsnormal" /> -->
-                            </div>
-                            <div id="textbox1b">
-                                <p> <span id="innov" style="font-weight: bold;"> 52% </span> van de werkgevers heeft in de afgelopen 2 jaar het productieproces geïnnoveerd </p>
+                        <div id="education">
+                            <img src="image/lightbulb.png" />
+                        </div>
+                        <div class="healthbar" style="position: absolute; width: 70%; right: 0px; top: 70px; left: 56px; ">
+                            <div class="progress">
+                                <div id="bar9" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:77%">
+                                </div>
                             </div>
                         </div>
 
+                        <div id="textbox1b">
+                            <p> <span id="element9" style="font-weight: bold;"> 52% </span> productieproces geinnoveerd </p>
+                        </div>
                     </div>
                 </div>
 
             </div>
         </div>
+
     </div>
+
 </body>
+
+<SCRIPT LANGUAGE="JavaScript">
+    var NOBrabant = new Array("Noord-oost Brabant", "83", "89", "80", "78", "98", "78", "74", "72", "22", "40", "50", "12", "65", "20", "21", "22", "Meer interne baanmobiliteit", "1", "Langer door willen werken", "1", "Minder vertrouwen een nieuwe baan te kunnen vinden", "0", "Minder regelmogelijkheden", "0", "70%", "20%", "21%");
+    var Zuidholland = new Array("Zuidholland", "50%", "40%", 2, 2, 1, 1, "30%", "40%", "22%", "21%", "82%", "20%", "22%", "40%", "50%", "12%", "30%", "40%", "22%", "21%", "82%", "20%", "22%", "21%", "82%", "20%", "22%", "40%", "50%", "12%");
+    var Westbrabant = new Array("")
+    var options = new Array(NOBrabant, Zuidholland, Westbrabant);
+
+
+
+    /*  function fillarray(excelfile.txt){
+      //readmethode en stop de regio's in een multidimensonale array (40*5)
+    }
+  */
+
+    /*  function changeview1(number) {
+          console.log("changedview");
+          var nr = number - 1;
+          document.getElementById("regionaam").innerHTML = options[nr][0];
+          document.getElementById("arbeidspart55").innerHTML = options[nr][1];
+          document.getElementById("werkloos").innerHTML = options[nr][2];
+          // thumbs  document.getElementById("werkloos").innerHTML = options[nr][2];
+          // document.getElementById("werkloos").innerHTML = options[nr][2];
+          // document.getElementById("werkloos").innerHTML = options[nr][2];
+          // document.getElementById("werkloos").innerHTML = options[nr][2];
+          // document.getElementById("werkloos").innerHTML = options[nr][2];
+          document.getElementById("doorwerpen").innerHTML = options[nr][8];
+          document.getElementById("kwetsgroep").innerHTML = options[nr][9];
+          document.getElementById("maatregge").innerHTML = options[nr][10];
+          // thumb document.getElementById("").innerHTML = options[nr][9];
+          document.getElementById("goedgez").innerHTML = options[nr][12];
+          //cardio width: % document.getElementById("kwetsgroep").innerHTML = options[nr][9];
+          document.getElementById("werkprive").innerHTML = options[nr][14];
+          //jingjang width: % document.getElementById("kwetsgroep").innerHTML = options[nr][9];
+          document.getElementById("voltoeg").innerHTML = options[nr][16];
+          document.getElementById("taakeisen").innerHTML = options[nr][17];
+          document.getElementById("maknieuw").innerHTML = options[nr][18];
+          // weegschaal 1
+          // weegschaal 2
+          // thumbs
+          document.getElementById("cursop").innerHTML = options[nr][22];
+          //document.getElementById("maknieuw").innerHTML = options[nr][20];
+          //document.getElementById("taakeisen").innerHTML = options[nr][21];
+          //document.getElementById("maknieuw").innerHTML = options[nr][22];
+          // thumbsdocument.getElementById("taakeisen").innerHTML = options[nr][19];
+          document.getElementById("innov").innerHTML = options[nr][27];
+
+      } */
+
+
+
+    function move(regio) {
+        var elem = document.getElementById("bar1");
+        var width = 1;
+        var id = setInterval(frame, 10);
+        var regio = regio;
+        var max = options[regio][1];
+
+        function frame() {
+            if (width >= max) {
+                clearInterval(id);
+            } else {
+                width++;
+                document.getElementById("goedgez").innerHTML = width + "%";
+                elem.style.width = width + '%';
+            }
+        }
+    }
+
+    function move2(regio) {
+        var elem = document.getElementById("bar2");
+        var width = 1;
+        var id = setInterval(frame, 10);
+        var regio = regio;
+        var max = options[regio][2];
+
+        function frame() {
+            if (width >= max) {
+                clearInterval(id);
+            } else {
+                width++;
+                document.getElementById("werkprive").innerHTML = width + "%";
+                elem.style.width = width + '%';
+            }
+        }
+
+    }
+
+    function move3(regio) {
+        var elem = document.getElementById("bar3");
+        var width = 1;
+        var id = setInterval(frame, 10);
+        var regio = regio;
+        var max = options[regio][3];
+
+        function frame() {
+            if (width >= max) {
+                clearInterval(id);
+            } else {
+                width++;
+                document.getElementById("element3").innerHTML = width + "%";
+                elem.style.width = width + '%';
+            }
+        }
+    }
+
+    function move4(regio) {
+        var elem = document.getElementById("bar4");
+        var width = 1;
+        var id = setInterval(frame, 10);
+        var regio = regio;
+        var max = options[regio][4];
+
+        function frame() {
+            if (width >= max) {
+                clearInterval(id);
+            } else {
+                width++;
+                document.getElementById("element4").innerHTML = width + "%";
+                elem.style.width = width + '%';
+            }
+        }
+    }
+
+    function move5(regio) {
+        var elem = document.getElementById("bar5");
+        var width = 10;
+        var id = setInterval(frame, 10);
+        var regio = regio;
+        var max = options[regio][5];
+
+        function frame() {
+            if (width >= max) {
+                clearInterval(id);
+            } else {
+                width++;
+                document.getElementById("element5").innerHTML = width + "%";
+                elem.style.width = width + '%';
+            }
+        }
+    }
+
+    function move6(regio) {
+        var elem = document.getElementById("bar6");
+        var width = 10;
+        var id = setInterval(frame, 10);
+        var regio = regio;
+        var max = options[regio][6];
+
+        function frame() {
+            if (width >= max) {
+                clearInterval(id);
+            } else {
+                width++;
+                document.getElementById("element6").innerHTML = width + "%";
+                elem.style.width = width + '%';
+            }
+        }
+    }
+
+    function move7(regio) {
+        var elem = document.getElementById("bar7");
+        var width = 10;
+        var id = setInterval(frame, 10);
+        var regio = regio;
+        var max = options[regio][7];
+
+
+        function frame() {
+            if (width >= max) {
+                clearInterval(id);
+            } else {
+                width++;
+                document.getElementById("element7").innerHTML = width + "%";
+                elem.style.width = width + '%';
+            }
+        }
+    }
+
+    function move8(regio) {
+        var elem = document.getElementById("bar8");
+        var width = 10;
+        var id = setInterval(frame, 10);
+        var regio = regio;
+        var max = options[regio][8];
+
+        function frame() {
+            if (width >= max) {
+                clearInterval(id);
+            } else {
+                width++;
+                document.getElementById("element8").innerHTML = width + "%";
+                elem.style.width = width + '%';
+            }
+        }
+    }
+
+    function move9(regio) {
+        var elem = document.getElementById("bar9");
+        var width = 10;
+        var id = setInterval(frame, 10);
+        var regio = regio;
+        var max = options[regio][9];
+
+        function frame() {
+            if (width >= max) {
+                clearInterval(id);
+            } else {
+                width++;
+                document.getElementById("element9").innerHTML = width + "%";
+                elem.style.width = width + '%';
+            }
+        }
+    }
+
+    function move10(regio) {
+        var elem = document.getElementById("bar10");
+        var width = 10;
+        var id = setInterval(frame, 10);
+        var regio = regio;
+        var max = options[regio][10];
+
+        function frame() {
+            if (width >= max) {
+                clearInterval(id);
+            } else {
+                width++;
+                document.getElementById("element10").innerHTML = width + "%";
+                elem.style.width = width + '%';
+            }
+        }
+    }
+
+    function move11(regio) {
+        var elem = document.getElementById("bar11");
+        var width = 10;
+        var id = setInterval(frame, 10);
+        var regio = regio;
+        var max = options[regio][11];
+
+        function frame() {
+            if (width >= max) {
+                clearInterval(id);
+            } else {
+                width++;
+                document.getElementById("element11").innerHTML = width + "%";
+                elem.style.width = width + '%';
+            }
+        }
+    }
+
+    function move12(regio) {
+        var elem = document.getElementById("bar12");
+        var width = 10;
+        var id = setInterval(frame, 10);
+        var regio = regio;
+        var max = options[regio][12];
+
+        function frame() {
+            if (width >= max) {
+                clearInterval(id);
+            } else {
+                width++;
+                document.getElementById("element12").innerHTML = width + "%";
+                elem.style.width = width + '%';
+            }
+        }
+    }
+
+    function load() {
+        console.log("loaded");
+    }
+    // progressbar.js@1.0.0 version is used
+    // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
+
+    var bar = new ProgressBar.Circle(container4, {
+        color: '#aaa',
+        // This has to be the same size as the maximum width to
+        // prevent clipping
+        strokeWidth: 4,
+        trailWidth: 1,
+        easing: 'easeInOut',
+        duration: 1400,
+        text: {
+            autoStyleContainer: false
+        },
+        from: {
+            color: '#aaa',
+            width: 1
+        },
+        to: {
+            color: '#333',
+            width: 4
+        },
+        // Set default step function for all animate calls
+        step: function(state, circle) {
+            circle.path.setAttribute('stroke', state.color);
+            circle.path.setAttribute('stroke-width', state.width);
+
+            var value = Math.round(circle.value() * 100);
+            if (value === 0) {
+                circle.setText('');
+            } else {
+                circle.setText(value + '%');
+            }
+
+        }
+    });
+    bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+    bar.text.style.fontSize = '2rem';
+    bar.text.style.top = '90px';
+    bar.text.style.left = '90px';
+
+    bar.animate(0.7);
+
+    var bar2 = new ProgressBar.Circle(container5, {
+        color: '#aaa',
+        // This has to be the same size as the maximum width to
+        // prevent clipping
+        strokeWidth: 4,
+        trailWidth: 1,
+        easing: 'easeInOut',
+        duration: 1400,
+        text: {
+            autoStyleContainer: false
+        },
+        from: {
+            color: '#aaa',
+            width: 1
+        },
+        to: {
+            color: '#333',
+            width: 4
+        },
+        // Set default step function for all animate calls
+        step: function(state, circle) {
+            circle.path.setAttribute('stroke', state.color);
+            circle.path.setAttribute('stroke-width', state.width);
+
+            var value = Math.round(circle.value() * 100);
+            if (value === 0) {
+                circle.setText('');
+            } else {
+                circle.setText(value + '%');
+            }
+
+        }
+    });
+    bar2.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+    bar2.text.style.fontSize = '2rem';
+    bar2.text.style.top = '280px';
+    bar2.text.style.left = '90px';
+
+    bar2.animate(0.7);
+
+    var bar3 = new ProgressBar.Circle(container6, {
+        color: '#aaa',
+        // This has to be the same size as the maximum width to
+        // prevent clipping
+        strokeWidth: 4,
+        trailWidth: 1,
+        easing: 'easeInOut',
+        duration: 1400,
+        text: {
+            autoStyleContainer: false
+        },
+        from: {
+            color: '#aaa',
+            width: 1
+        },
+        to: {
+            color: '#333',
+            width: 4
+        },
+        // Set default step function for all animate calls
+        step: function(state, circle) {
+            circle.path.setAttribute('stroke', state.color);
+            circle.path.setAttribute('stroke-width', state.width);
+
+            var value = Math.round(circle.value() * 100);
+            if (value === 0) {
+                circle.setText('');
+            } else {
+                circle.setText(value + '%');
+            }
+
+        }
+    });
+    bar3.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+    bar3.text.style.fontSize = '2rem';
+    bar3.text.style.top = '460px';
+    bar3.text.style.left = '90px';
+
+    bar3.animate(0.7);
+
+    var bar4 = new ProgressBar.Circle(container7, {
+        color: '#aaa',
+        // This has to be the same size as the maximum width to
+        // prevent clipping
+        strokeWidth: 4,
+        trailWidth: 1,
+        easing: 'easeInOut',
+        duration: 1400,
+        text: {
+            autoStyleContainer: false
+        },
+        from: {
+            color: '#aaa',
+            width: 1
+        },
+        to: {
+            color: '#333',
+            width: 4
+        },
+        // Set default step function for all animate calls
+        step: function(state, circle) {
+            circle.path.setAttribute('stroke', state.color);
+            circle.path.setAttribute('stroke-width', state.width);
+
+            var value = Math.round(circle.value() * 100);
+            if (value === 0) {
+                circle.setText('');
+            } else {
+                circle.setText(value + ' jaar');
+            }
+
+        }
+    });
+    bar4.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+    bar4.text.style.fontSize = '2rem';
+    bar4.text.style.top = '110px';
+    bar4.text.style.left = '70px';
+
+    bar4.animate(0.7);
+
+    var bar5 = new ProgressBar.Circle(container8, {
+        color: '#aaa',
+        // This has to be the same size as the maximum width to
+        // prevent clipping
+        strokeWidth: 4,
+        trailWidth: 1,
+        easing: 'easeInOut',
+        duration: 1400,
+        text: {
+            autoStyleContainer: false
+        },
+        from: {
+            color: '#aaa',
+            width: 1
+        },
+        to: {
+            color: '#333',
+            width: 4
+        },
+        // Set default step function for all animate calls
+        step: function(state, circle) {
+            circle.path.setAttribute('stroke', state.color);
+            circle.path.setAttribute('stroke-width', state.width);
+
+            var value = Math.round(circle.value() * 100);
+            if (value === 0) {
+                circle.setText('');
+            } else {
+                circle.setText(value + ' jaar');
+            }
+
+        }
+    });
+    bar5.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+    bar5.text.style.fontSize = '2rem';
+    bar5.text.style.top = '110px';
+    bar5.text.style.left = '220px';
+
+    bar5.animate(0.7);
+
+    function fire(regio) {
+        var regio = regio;
+        var ind1 = options[regio][18];
+        var ind2 = options[regio][20];
+        var ind3 = options[regio][22];
+        var ind4 = options[regio][24];
+        var ind5 = options[regio][26];
+        var ind6 = options[regio][28];
+        var ind7 = options[regio][30];
+        var ind8 = options[regio][32];
+        var elem1 = document.getElementById("trend1");
+        var elem2 = document.getElementById("trend2");
+        var elem3 = document.getElementById("trend3");
+        var elem4 = document.getElementById("trend4");
+        var elem5 = document.getElementById("trend5");
+        var elem6 = document.getElementById("trend6");
+        var elem7 = document.getElementById("trend7");
+        var elem8 = document.getElementById("trend8");
+        document.getElementById("regionaam").innerHTML = options[regio][0];
+        document.getElementById("trend1").innerHTML = options[regio][17];
+        if (ind1 == 1) {
+            elem1.className = "arrowup";
+        } if (ind1 == 0) {
+            elem1.className = "arrowdown";
+        }
+        document.getElementById("trend2").innerHTML = options[regio][19];
+        if (ind2 == 1) {
+            elem2.className = "arrowup";
+        } if (ind2 == 0) {
+            elem2.className = "arrowdown";
+        }
+        document.getElementById("trend3").innerHTML = options[regio][21];
+        if (ind3 == 1) {
+            elem3.className = "arrowup";
+        } if (ind3 == 0) {
+            elem3.className = "arrowdown";
+        }
+        document.getElementById("trend4").innerHTML = options[regio][23];
+        if (ind4 == 1) {
+            elem4.className = "arrowup";
+        } if (ind4 == 0) {
+            elem4.className = "arrowdown";
+        }
+        //  document.getElementById("").innerHTML = options[regio][0];
+        myVar = setTimeout(move3(regio), 1000);
+        myVar = setTimeout(move4(regio), 1000);
+        myVar = setTimeout(move5(regio), 1000);
+
+        myVar = setTimeout(move(regio), 2000);
+        myVar = setTimeout(move2(regio), 2000);
+
+        setTimeout(move6(regio), 2000);
+        setTimeout(move7(regio), 2000);
+        move8(regio);
+        move9(regio);
+        load();
+        var cijferwerkt = options[regio][13] / 100;
+        bar.animate(cijferwerkt);
+        var cijferwerkt2 = options[regio][14] / 100;
+        bar2.animate(cijferwerkt2);
+        var cijferwerkt3 = options[regio][15] / 100;
+        bar3.animate(cijferwerkt3);
+        var cijferwerkt4 = options[regio][16] / 100;
+        bar4.animate(cijferwerkt4);
+        var cijferwerkt5 = options[regio][17] / 100;
+        bar5.animate(cijferwerkt5);
+
+
+    }
+</script>
 
 </html>

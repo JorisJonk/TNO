@@ -1,3 +1,5 @@
+$circle-size: 120px;
+
 .container {
     width: 1020px !important;
 }
@@ -12,6 +14,13 @@
     .container {
         width: 1020px !important;
     }
+}
+container4 {
+  margin: 20px;
+ width: 200px;
+ height: 200px;
+ position: relative;
+}
 }
 
 .box1 {
@@ -30,11 +39,12 @@
     width: 100%;
     height: 630px;
     float: right;
+
 }
 
 .box2 {
     width: 120px;
-    height: 630px;
+    height: 580px;
     background-color: white;
     border-color: grey;
     border-style: solid;
@@ -46,44 +56,80 @@
     word-break: normal;
     border-width: thin;
     box-shadow: 10px 10px 5px #888888;
+    background-image: url('image/beleidspijl3.png'), url('image/beleidspijl3.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 140% 10%, 140% 91%;
 }
 
 .box3 {
     width: 100%;
-    length: 100%;
+    height: 700px;
     background-color: white;
     border-style: hidden;
     border-color: green;
     border-radius: 40px;
     background-image: url('image/beleidspijl1.png');
     background-repeat: no-repeat;
-    background-position: center;
-    background-position:
+    background-position: 50% 35%;
+
 }
 
+.backgroundarrow2 {
+  background-image: url('image/beleidspijl3.png'), url('image/beleidspijl3.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: -17% 8%, -17% 73%;
+}
+
+
+.backgroundarrow3 {
+  background-image: url('image/beleidspijl3.png'), url('image/beleidspijl3.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: 113% 9%, 113% 82.5%;
+}
+
+
+
+
 .box4 {
-    width: 100%;
-    length: 100%;
+    width: 300px;
+    height: 700px;
     background-color: white;
+    background-image: url('image/beleidspijl1.png'), url('image/beleidspijl2.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 50% 35%, -70% 42%;
     border-style: hidden;
     border-color: green;
     border-radius: 40px;
     margin-left: 10%;
+
+}
+
+.backgroundarrow {
+  background-image:  url('image/beleidspijl2.png');
+  background-repeat: no-repeat;
+  background-position: 0% 42%;
+  z-index: -100;
+
+}
+.backgroundarrow2 {
+
 }
 
 .ditextbox {
     border-style: hidden;
     padding: 5%;
-    margin-bottom: 40%;
+    margin-bottom: 35%;
     height: auto;
     width: 100px;
+    font-size: 9px;
 }
 
 .fctextbox {
     border-style: hidden;
     padding: 5%;
     height: auto;
-    width: auto;
+    width: 150px;
+
 }
 
 .textbox {
@@ -112,6 +158,8 @@
     width: 300px;
     border-width: thin;
     box-shadow: 10px 10px 5px #888888;
+    position:absolute;
+    left: 10px;
 }
 
 .textbox3a {
@@ -120,14 +168,16 @@
     border-radius: 40px;
     padding: 5%;
     margin-bottom: 20%;
+    left: 50px;
+    top: 200px;
     float: right;
     height: 175px;
     width: 300px;
-
     background-repeat: no-repeat;
     background-position: center;
     border-width: thin;
     box-shadow: 10px 10px 5px #888888;
+    position: absolute;
 }
 
 .textbox3b {
@@ -143,8 +193,9 @@
     background-position: center;
     border-width: thin;
     box-shadow: 10px 10px 5px #888888;
-    
-
+    position: absolute;
+    top: 400px;
+    left: 10px;
 }
 
 .textbox4 {
@@ -167,12 +218,14 @@
     height: 175px;
     width: 300px;
     float: right;
-    background-image: url('image/cursusopleiding.png');
     background-size: 130px 130px;
     background-repeat: no-repeat;
     background-position: left center;
     border-width: thin;
     box-shadow: 10px 10px 5px #888888;
+    position: absolute;
+    top: 0px;
+    left: 40px;
 }
 
 .textbox4imgb {
@@ -184,13 +237,28 @@
     height: 175px;
     width: 300px;
     float: right;
-    background-image: url('image/inzetbaarheid.png');
     background-size: 260px 110px;
     background-repeat: no-repeat;
     background-position: bottom center;
     border-width: thin;
     box-shadow: 10px 10px 5px #888888;
     display: inline-block;
+    position: absolute;
+    top: 202px;
+    left: 70px;
+}
+
+.container7 {
+  width: 100px;
+  margin-top: 7%;
+  float: left;
+}
+
+.container8 {
+  width: 100px;
+  float: left;
+  margin-left: 20%;
+  margin-top: 7%;
 }
 
 .textbox4imgc {
@@ -202,12 +270,11 @@
     height: 175px;
     width: 300px;
     float: right;
-    background-image: url('image/lampje.png');
-    background-size: 130px 130px;
-    background-repeat: no-repeat;
-    background-position: left center;
     border-width: thin;
     box-shadow: 10px 10px 5px #888888;
+    position: absolute;
+    top: 400px;
+    left: 42px;
 }
 
 .greenheader {
@@ -222,8 +289,20 @@
     size: fixed;
 }
 
+.arrowup {
+  margin-top: 5%;
+  font-size: 9px;
+
+}
+
+.arrowdown {
+  margin-top: 5%;
+  font-size: 9px;
+}
+
 .arrowup::before {
     content: url('image/arrowup.png');
+
 }
 
 .arrowdown::before {
@@ -232,6 +311,23 @@
 
 .body {
     background-color: white;
+}
+.jCProgress {
+     position: absolute;
+     z-index: 9999999;
+     /*  margin-top:-15px; /* offset from the center */
+}
+
+.jCProgress > div.percent {
+     font: 18px/27px 'BebasRegular', Arial, sans-serif;
+     color:#ebebeb;
+     text-shadow: 1px 1px 1px #1f1f1f;
+
+     position:absolute;
+     margin-top:40px;
+     margin-left:22px;
+     text-align: center;
+     width:60px;
 }
 
 #stripeleft {
@@ -246,6 +342,7 @@
     position: absolute;
     top: 44px;
 }
+
 #jingjang {
     position: absolute;
     top: 85px;
@@ -258,9 +355,8 @@
     word-break: normal;
     width: 80%;
     position: absolute;
-    left: 83px;
+    left: 63px;
     top: 44px;
-
 }
 
 #floattext2 {
@@ -270,9 +366,8 @@
     word-break: normal;
     width: 80%;
     position: absolute;
-    left: 83px;
+    left: 63px;
     top: 85px;
-
 }
 
 .spacing {
@@ -288,18 +383,15 @@
     left: 40px;
 }
 
-
-
 #textbox2 {
-
-        left: 40px;
-        top: 42px;
-        font-size: 9px;
+    left: 40px;
+    top: 42px;
+    font-size: 9px;
     position: absolute;
 }
 
 #textbox3 {
-  position: absolute;
+    position: absolute;
     font-size: 75%;
     font-size: 9px;
     left: 40px;
@@ -307,61 +399,66 @@
 }
 
 #toegerust {
-  position: absolute;
-  right: 230px;
-  top: 50px;
+    position: absolute;
+    right: 230px;
+    top: 50px;
 }
 
 #eisen {
- position: absolute;
- right: 230px;
- top: 95px;
+    position: absolute;
+    right: 230px;
+    top: 95px;
+}
 
-}
 #nieuwbaan {
-  position: absolute;
-  right: 230px;
-  top: 132px;
+    position: absolute;
+    right: 230px;
+    top: 132px;
 }
+
 #werkbelasting {
-  position: absolute;
-  right: 230px;
-  top: 52px;
+    position: absolute;
+    right: 230px;
+    top: 62px;
 }
 
 #regelmogelijkheden {
-  position: absolute;
-  right: 230px;
-  top: 102px;
+    position: absolute;
+    right: 230px;
+    top: 102px;
 }
+
 #textbox1b {
-    float: right;
-    margin-top: 3%;
-    margin-bottom: 2%;
-    margin-right: 5%;
-    width: 50%;
+    position: absolute;
+    left: 58px;
+    font-size: 9px;
+    top: 56px;
+}
+#textbox1f {
+    position: absolute;
+    left: 58px;
+    font-size: 9px;
+    top: 46px;
 }
 
 #textbox4 {
-  position: absolute;
-  font-size: 9px;
-  top: 530px;
-  left: 80px;
-
+    position: absolute;
+    font-size: 9px;
+    top: 60px;
+    left: 58px;
 }
 
 #textbox5 {
     position: absolute;
     font-size: 9px;
-    top: 580px;
-    left: 80px;
+    top: 100px;
+    left: 58px;
 }
 
-#titel1 {
+#titel1 {}
 
-}
 #beleidspijl1 {
-  position: relative;
+    position: relative;
 }
 
 .floatleft {
@@ -413,3 +510,15 @@
 #tekstbox43 {}
 
 #tekstbox44 {}
+
+#education {
+    position: absolute;
+    top: 50px;
+}
+
+
+@media only screen and (max-width: 990px) {
+    .progress {
+        margin-bottom: 20px;
+    }
+}
